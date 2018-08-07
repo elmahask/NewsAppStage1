@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/welcome_to_egypt"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/section"
+                style="@style/myStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_egypt"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="@string/arts"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/_07_aug_2018"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
