@@ -21,18 +21,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/welcome_to_egypt"
                 android:textAppearance="@android:style/TextAppearance.Large"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                tools:text="@string/welcome_to_egypt" />
 
             <TextView
                 android:id="@+id/section"
                 style="@style/myStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome_to_egypt"
                 android:textAppearance="@android:style/TextAppearance.Medium"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                tools:text="@string/welcome_to_egypt" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,15 +40,15 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/category"
+                    android:id="@+id/author"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="@string/arts"
                     android:textAppearance="@android:style/TextAppearance.Small"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    tools:text="@string/arts" />
 
                 <TextView
                     android:id="@+id/date"
@@ -58,10 +58,10 @@
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/_07_aug_2018"
                     android:textAppearance="@android:style/TextAppearance.Small"
                     android:textColor="@color/colorPrimaryDark"
-                    tools:ignore="RtlHardcoded" />
+                    tools:ignore="RtlHardcoded"
+                    tools:text="@string/_07_aug_2018" />
 
             </LinearLayout>
         </LinearLayout>

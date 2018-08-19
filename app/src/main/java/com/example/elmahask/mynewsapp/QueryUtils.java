@@ -158,9 +158,19 @@ public final class QueryUtils {
                 String date = currentNews.getString("webPublicationDate");
 
                 // Extract the value for the key called "pillarName"
-                String category = currentNews.getString("pillarName");
+                // String author = currentNews.getString("pillarName");
+                JSONArray tagsAuthor = currentNews.getJSONArray("tags");
+                String author = "";
+                if (tagsAuthor.length() != 0) {
+                    for (int j = 0; j < tagsAuthor.length(); j++) {
+                        JSONObject currentTagsAuthor = tagsAuthor.getJSONObject(0);
+                        author = "By"+currentTagsAuthor.getString("webTitle");
+                    }
+                } else {
+                    author = "No Author";
+                }
 
-                News theNews = new News(url, title, section, date, category);
+                News theNews = new News(url, title, section, date, author);
 
                 news.add(theNews);
             }

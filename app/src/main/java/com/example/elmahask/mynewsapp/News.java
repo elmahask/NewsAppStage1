@@ -6,14 +6,14 @@ public class News {
     private String mUrl;
     private String mSection;
     private String mDate;
-    private String mPillarName;
+    private String mAuthor;
 
-    public News(String mUrl, String mTitle, String mSection, String mDate, String mPillarName) {
+    public News(String mUrl, String mTitle, String mSection, String mDate, String mAuthor) {
         this.mTitle = mTitle;
         this.mUrl = mUrl;
         this.mSection = mSection;
         this.mDate = mDate;
-        this.mPillarName = mPillarName;
+        this.mAuthor = mAuthor;
     }
 
     public String getmTitle() {
@@ -32,7 +32,7 @@ public class News {
         return mDate;
     }
 
-    public String getmPillarName() {
-        return mPillarName;
+    public String getmAuthor() {
+        return mAuthor;
     }
 }

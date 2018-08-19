@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MyNewsApp</string>
-    <string name="no_connection">No internet connection.</string>
-    <string name="no_news">No News Found</string>
-    <string name="arts">Arts</string>
+    <string name="no_connection">No internet connection…</string>
+    <string name="no_news">No News Found \nCheck internet connection…</string>
+    <string name="arts">Michael</string>
     <string name="welcome_to_egypt">welcome to egypt</string>
     <string name="_07_aug_2018">07 Aug 2018</string>
 </resources>

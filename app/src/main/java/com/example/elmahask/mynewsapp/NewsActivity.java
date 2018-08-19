@@ -23,7 +23,8 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
      * URL for News data from the Guardian APIs DataSet
      */
     private static final String API_REQUEST_URL =
-            "https://content.guardianapis.com/search?api-key=2cba8f98-af82-4d52-98ec-5ac8c899f010";
+            "https://content.guardianapis.com/search?show-tags=contributor/order-by=newest&api-key=2cba8f98-af82-4d52-98ec-5ac8c899f010";
+//            "https://content.guardianapis.com/search?api-key=2cba8f98-af82-4d52-98ec-5ac8c899f010";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -34,7 +35,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     /**
      * Adapter for the list of News
      */
-    private NewsAdpter mAdapter;
+    private NewsAdapter mAdapter;
 
     /**
      * TextView that is displayed when the list is empty
@@ -51,7 +52,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         mEmptyTV = (TextView) findViewById(R.id.empty_view);
         newsListView.setEmptyView(mEmptyTV);
 
-        mAdapter = new NewsAdpter(this, new ArrayList<News>());
+        mAdapter = new NewsAdapter(this, new ArrayList<News>());
 
         newsListView.setAdapter(mAdapter);
 
@@ -82,7 +83,6 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         } else {
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
-
             mEmptyTV.setText(R.string.no_connection);
         }
 
@@ -99,9 +99,8 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
 
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
-
         mEmptyTV.setText(R.string.no_news);
-
+        mAdapter.clear();
         if (news != null && !news.isEmpty()) {
             mAdapter.addAll(news);
         }
@@ -111,4 +110,5 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<List<News>> loader) {
         mAdapter.clear();
     }
+
 }

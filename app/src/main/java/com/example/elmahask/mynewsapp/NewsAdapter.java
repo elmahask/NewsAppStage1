@@ -14,12 +14,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class NewsAdpter extends ArrayAdapter<News> {
+public class NewsAdapter extends ArrayAdapter<News> {
 
     /**
-     * Constructs a new {@link NewsAdpter}.
+     * Constructs a new {@link NewsAdapter}.
      */
-    public NewsAdpter(Context context, List<News> earthquakes) {
+    public NewsAdapter(Context context, List<News> earthquakes) {
         super(context, 0, earthquakes);
     }
 
@@ -59,8 +59,8 @@ public class NewsAdpter extends ArrayAdapter<News> {
         TextView newsSection = listItemView.findViewById(R.id.section);
         newsSection.setText(currentNews.getmSection());
 
-        TextView newPillarName = listItemView.findViewById(R.id.category);
-        newPillarName.setText(currentNews.getmPillarName());
+        TextView newAuthorName = listItemView.findViewById(R.id.author);
+        newAuthorName.setText(currentNews.getmAuthor());
 
         TextView newsDate = listItemView.findViewById(R.id.date);
         newsDate.setText(formatDate(currentNews.getmDate()));
