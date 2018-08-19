@@ -9,6 +9,7 @@ public class News {
     private String mAuthor;
 
 
+
     public News(String mUrl, String mTitle, String mSection, String mDate, String mAuthor) {
         this.mTitle = mTitle;
         this.mUrl = mUrl;
